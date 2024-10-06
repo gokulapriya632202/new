@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday</title>
+    <style>
+      form {
+        margin: 250px 500px;
+        padding: 20px;
+        border: 2px solid black;
+        position: absolute;
+        top: 20px;
+        left: 60px;
+        background-color: rgba(128, 128, 128, 0.326);
+        justify-content: center;
+      }
+      #click {
+        margin-left: 100px;
+        padding: 10px 20px;
+        background-color: rgb(58, 231, 191);
+        border-color: rgb(58, 231, 191);
+        border-style: solid;
+        transition: opacity 0.15s;
+        cursor: pointer;
+        opacity: 0.6;
+      }
+      #click:hover {
+        opacity: 1;
+      }
+      img {
+        width: 100%;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/istockphoto-1713569808-640x640.jpg" alt="" />
+    <form id="birthdayForm" action="">
+      <label for="name">Enter Your Name:</label>
+      <input type="text" id="name" required /><br /><br />
+      <button type="button" id="click">Click here</button>
+    </form>
+
+    <script>
+      document.getElementById("click").onclick = function () {
+        var nameInput = document.getElementById("name").value;
+        if (nameInput === "") {
+          alert("Please enter your name.");
+        } else {
+          window.location.href = "firstpage.html";
+        }
+      };
+    </script>
+  </body>
+</html>
